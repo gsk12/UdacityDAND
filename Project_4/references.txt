@@ -1,0 +1,6 @@
+References
+1. https://s3.amazonaws.com/udacity-hosted-downloads/ud651/wineQualityInfo.txt
+2. https://en.wikipedia.org/wiki/Fermentation_in_winemaking
+3. http://waterhouse.ucdavis.edu/whats-in-wine/volatile-acidity
+4. https://s3.amazonaws.com/content.udacity-data.com/courses/ud651/diamondsExample_2016-05.html
+5. https://onlinecourses.science.psu.edu/stat857/node/223

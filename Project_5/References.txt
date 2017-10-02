@@ -1,0 +1,9 @@
+[1] https://www.cs.cmu.edu/~./enron/
+[2] http://scikit-learn.org/stable/documentation.html
+[3] https://discussions.udacity.com/t/outlier-removal/7446
+[4] https://www.dezyre.com/data-science-in-python-tutorial/principal-component-analysis-tutorial
+[5] http://sebastianraschka.com/Articles/2015_pca_in_3_steps.html
+[6] http://us.milliman.com/uploadedFiles/insight/2017/effective-model-validation-machine-learning.pdf
+[7] https://en.wikipedia.org/wiki/Precision_and_recall
+[8] https://en.wikipedia.org/wiki/Stratified_sampling
+[9] https://www.researchgate.net/post/How_do_I_determine_the_right_number_of_significant_principal_components_in_PCA

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualizing Baseball Data</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Roboto:400,400i" rel="stylesheet">
+ <style type="text/css">
+   body{
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  width: 65rem;
+  margin: 3rem auto 3rem auto;
+}
+
+h1,h2,h3{
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.story-text{
+  font-size: 1.2rem;
+}
+
+.plot-container{
+  position: relative;
+}
+
+.plot-container *{
+  display: inline;
+}
+
+.buttons{
+  position: absolute;
+  right: 2rem;
+
+}
+
+.buttons button{
+  display: block;
+}
+
+
+.axis text {
+  font: 0.8rem sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+.citation-from{
+  text-align: right;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+rect.box,
+line.whisker {
+  fill: #fff;
+  stroke: #969696;
+}
+
+line.median{
+  stroke: #3498DB;
+  stroke-width: 0.3rem;
+}
+
+circle.outlier {
+  fill: #fff;
+  fill-opacity: 0.5;
+  stroke: #ccc;;
+}
+
+.tooltip, .d3-tip{
+  background: #fff;
+  border-radius: 0.125rem;
+  padding: 0.5rem;
+  border: solid 0.1rem #000;
+  opacity: 0.9;
+  pointer-events: none;
+
+}
+
+ </style>
+</head>
+<body>
+  <h1>Baseball Performance</h1>
+  This document presents a visual analysis using some parameters that shows differences in the performance of the baseball players. The data set contains data of 1,157 baseball players with their handedness (right or left handed or ambidextrous), height (in inches), weight (in pounds), batting average, and home runs. The performance is measured as their batting average and the number of home runs. Handedness, height and weight are the parameters used in this analysis.
+
+
+
+  <div id="hand-barplot" class="story-text">
+    <h2>Handedness of Baseball Players</h2>
+    <p>This depicts the handedness of the players. As observed most of the players are right handed. Around 10% of the world population is left-handed [1], however we
+    see a much higher proportion of left-handed inviduals playing baseball.
+    From a sample of 1,157 baseball players, we see that around 64% are right handed,
+    almost 27% are left handed and 9% are ambidextrous. </p>
+    
+    <div class='tableauPlaceholder' id='viz1496847056002' style='position: relative'><noscript><a href='#'><img alt='Handedness of Baseball Players ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='BaseBallData&#47;Sheet5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1496847056002');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+  
+   <div id="avg-hand" class="story-text">
+    <h2>Batting Average and Home Run average by Handedness</h2>
+    <p>The batting average is a baseball statistic which is defined by the number
+      of hits divided by at bats [2]. In Baseball an home run is when a batter hits the ball over the edge of the field and then is able to score a point by reaching home safely. A less common type of home run is called a inside-the-par home run. This is when the batter is able to circle all the bases without being put out by the fielders of the opposite team. [3] 
+
+      <br>
+
+      The median batting average
+      of left-handed players and ambidextrous players are higher than right-handed players.
+      Left-handed players are better at both, batting and doing home runs, but those who are ambidextrous (i.e. they use both hands) are equally good at batting. In terms of doing HRs, being able to use both hands does not enhance HRs values when compared to only right- or only left-handed.
+      
+    </p>
+ 
+    <div class='tableauPlaceholder' id='viz1496848023052' style='position: relative'><noscript><a href='#'><img alt='Sheet 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='BaseBallData&#47;Sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1496848023052');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+ 
+    </div>
+ <div id="avg-height" class="story-text">
+    <h2>Batting Average and Home Run Average by Height</h2>
+    <p>After some exploratory data analysis, thought it would be good to check that players with low height are better in their batting average. (Maybe a lower centre of mass helps them to performing the batting movement).
+Furthermore, since weight and height are generally related, a similar trend between height and batting average could be explored. So using the “height” parameter and average of players batting performance.
+      <br>
+    Shorter players are better at batting, with ideal height at 65 inches. Then, the higher the height, the smaller the average batting, it diminishes slowly till 77 inches and then drops low. There is an almost uniform distribution of average home runs across all heights, with some outliers located at both ends: a very high value at 65 inches and a very low value at 79 inches.
+
+    </p>
+    
+    <div class='tableauPlaceholder' id='viz1496848063595' style='position: relative'><noscript><a href='#'><img alt='Shorter players have high batting averages ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='BaseBallData&#47;Sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ba&#47;BaseBallData&#47;Sheet4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1496848063595');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+  </div>
+ <div id="Observations" class="story-text">
+    <h2>Observations</h2>
+    <ol>
+    <li> Shorter players are better at batting (have higher batting Average).</li>
+  <li>Medium players have more constant (similar) in their home run rates. </li>
+<li>Left-handed players are better batters (Higher Batting Average) and hitting home runs (Home Run Average).</li>
+</ol>
+
+  </div>
+  <div id="references" class="story-text">
+    <h2>References</h2>
+    <ol>
+      <li> http://psycnet.apa.org/journals/bul/84/3/385/ </li>
+      <li> https://en.wikipedia.org/wiki/Batting_average#Major_League_Baseball</li>
+      <li> https://en.wikipedia.org/wiki/Home_run#Inside-the-park_home_run </li>
+
+    </ol>
+  </div>
+</body>
+</html>
